@@ -14,11 +14,11 @@ public partial class MainPage
     // to define what happens when the WebView requests a set of permissions. See
     // PermissionManagingBlazorWebChromeClient.cs to explore the approach taken in this example.
 
-    private partial void BlazorWebViewInitializing(object? sender, BlazorWebViewInitializingEventArgs e)
+    partial void BlazorWebViewInitializing(object? sender, BlazorWebViewInitializingEventArgs e)
     {
     }
 
-    private partial void BlazorWebViewInitialized(object? sender, BlazorWebViewInitializedEventArgs e)
+    partial void BlazorWebViewInitialized(object? sender, BlazorWebViewInitializedEventArgs e)
     {
         if (e.WebView.Context?.GetActivity() is not ComponentActivity activity)
         {

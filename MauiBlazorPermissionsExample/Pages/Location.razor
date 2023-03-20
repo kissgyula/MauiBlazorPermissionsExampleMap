@@ -38,7 +38,10 @@ else
     <button @onclick="Reload">Reload</button>
 }
 
+<div id="map" style="width: 100%; height: 300px; border: red 1px solid"></div>
+
 @code {
+
     public record GeolocationCoordinates(
         double Latitude,
         double Longitude,
@@ -72,6 +75,9 @@ else
         if (firstRender)
         {
             _geolocationWatchId = await JS.InvokeAsync<int>("startWatchingPosition", _selfReference);
+
+            var targetUrl = "/js/map.js";
+            await JS.InvokeVoidAsync("loadJs", targetUrl);
         }
     }
 

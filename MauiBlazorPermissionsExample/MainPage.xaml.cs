@@ -13,6 +13,6 @@ public partial class MainPage : ContentPage
         _blazorWebView.BlazorWebViewInitialized += BlazorWebViewInitialized;
     }
 
-    private partial void BlazorWebViewInitializing(object? sender, BlazorWebViewInitializingEventArgs e);
-    private partial void BlazorWebViewInitialized(object? sender, BlazorWebViewInitializedEventArgs e);
+    partial void BlazorWebViewInitializing(object? sender, BlazorWebViewInitializingEventArgs e);
+    partial void BlazorWebViewInitialized(object? sender, BlazorWebViewInitializedEventArgs e);
 }
